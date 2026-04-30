@@ -1,0 +1,37 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test and validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --upgrade pip
+      - run: pip install -r requirements.txt
+      - run: pytest -q tests
+
+  deploy:
+    name: Deploy to Hugging Face (optional)
+    needs: test
+    if: github.event_name == 'workflow_dispatch' && secrets.HF_TOKEN != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --upgrade pip
+      - run: pip install -r requirements.txt
+      - name: Run training on sample data
+        run: python src/train.py --output-dir outputs/sentiment-model --epochs 1 --max-train-samples 512 --max-eval-samples 128
+      - name: Deploy to Hugging Face
+        run: python src/deploy.py --model-dir outputs/sentiment-model --repo-id "$HF_MODEL_REPO" --token "$HF_TOKEN"
