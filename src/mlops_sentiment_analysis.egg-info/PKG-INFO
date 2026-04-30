@@ -1,3 +1,27 @@
+Metadata-Version: 2.4
+Name: mlops-sentiment-analysis
+Version: 0.1.0
+Summary: Sentiment analysis ML-Ops project with Hugging Face training, deployment, and monitoring.
+Author-email: Emanuele Salbego <emanuele@example.com>
+License: MIT
+Keywords: mlops,sentiment-analysis,huggingface,monitoring,deployment
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: transformers==4.35.2
+Requires-Dist: numpy<2
+Requires-Dist: datasets>=2.15.0
+Requires-Dist: scikit-learn>=1.2
+Requires-Dist: huggingface_hub>=0.16.0
+Requires-Dist: pandas>=2.0
+Requires-Dist: tqdm>=4.0
+Requires-Dist: sentencepiece>=0.1.99
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+
 # ML-Ops e machine learning in operazione
 
 Questo repository implementa un progetto ML-Ops per l'analisi del sentiment su testi social media.

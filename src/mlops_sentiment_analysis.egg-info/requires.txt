@@ -1,0 +1,11 @@
+transformers==4.35.2
+numpy<2
+datasets>=2.15.0
+scikit-learn>=1.2
+huggingface_hub>=0.16.0
+pandas>=2.0
+tqdm>=4.0
+sentencepiece>=0.1.99
+
+[dev]
+pytest>=8.0
