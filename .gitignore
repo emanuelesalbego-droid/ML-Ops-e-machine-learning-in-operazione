@@ -1,0 +1,71 @@
+# Ambienti virtuali
+venv/
+.venv/
+env/
+ENV/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Egg-info e distribuzioni
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Dipendenze instalate
+*.lock
+site-packages/
+
+# IDE e editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Test e coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ML/Data Science
+# Modelli addestrati (se grandi)
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.h5
+*.model
+
+# Output di training/inference
+runs/
+outputs/
+checkpoints/
+logs/
+
+# Dataset/dati (se voluminosi)
+data/raw/
+*.csv
+*.json
+
+# Credenziali
+.env
+.env.local
+credentials.json
+secrets.json
+
+# OS
+.DS_Store
+Thumbs.db

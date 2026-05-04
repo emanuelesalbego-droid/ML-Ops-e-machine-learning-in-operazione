@@ -1,7 +1,0 @@
-__init__
-data
-deploy
-model
-monitor
-predict
-train
