@@ -1,6 +1,5 @@
 transformers==4.35.2
 numpy<2
---find-links https://download.pytorch.org/whl/cpu/torch_stable.html
 torch==2.2.2+cpu
 datasets>=2.15.0
 scikit-learn>=1.2

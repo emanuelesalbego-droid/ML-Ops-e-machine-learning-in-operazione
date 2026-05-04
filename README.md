@@ -37,10 +37,8 @@ Viene utilizzato il modello pre-addestrato `cardiffnlp/twitter-roberta-base-sent
 2. Installare le dipendenze aggiuntive, incluso il pacchetto PyTorch CPU:
    ```bash
    python -m pip install -r requirements.txt
+   
    ```
-
-> Se utilizzi un ambiente con GPU, sostituisci la riga `torch==2.2.2+cpu` in `requirements.txt` con la versione PyTorch GPU appropriata.
-
 ## Come usare
 
 1. Eseguire il training di prova:
